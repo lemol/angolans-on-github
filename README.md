@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Roadmap
+
+[ ] - Setup the initial structure
+
+[ ] - Build the stats section / view
+
+[ ] - Build the profiles and single section / view
+
+[ ] - Add Redux
+
+[ ] - Add tests
+
+[ ] - Dockerize the application
+
 ## Available Scripts
 
 In the project directory, you can run:
