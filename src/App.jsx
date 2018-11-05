@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 
+// Views / Components
+import Stats from './views/Stats';
+
 const Home = () => (
     <div>
         <div>Home</div>
-    </div>
-);
-
-const Stats = () => (
-    <div>
-        <div>Stats</div>
     </div>
 );
 
