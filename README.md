@@ -2,17 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Roadmap
 
-[ ] - Setup the initial structure
-
-[ ] - Build the stats section / view
-
-[ ] - Build the profiles and single section / view
-
-[ ] - Add Redux
-
-[ ] - Add tests
-
-[ ] - Dockerize the application
+- [ ] Setup the initial structure
+- [ ] Build the stats section / view
+- [ ] Build the profiles and single section / view
+- [ ] Add Redux
+- [ ] Improve the UI
+- [ ] Add tests
+- [ ] Dockerize the application
 
 ## Available Scripts
 
