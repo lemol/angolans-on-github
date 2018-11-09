@@ -1,6 +1,5 @@
 // Dependencies
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
 
 // Add stylesheet
 import './App.css';
@@ -28,23 +27,24 @@ class App extends Component {
 
     render() {
 
+        // Users
         const profile = this.state.users.map((user) => {
             return (
-                <Col key={user.node_id}>
+                <article className="column" key={user.node_id}>
                     <figure className="user__profile-photo">
                         <img src={user.avatar_url} alt={user.login} className="user__profile-photo__img"/>
                     </figure>
                     <h1 className="user__name">{user.login}</h1>
-                </Col>
+                </article>
             );
         });
 
         return(
             <div>
                 <div className="container">
-                    <Row>
+                    <div className="columns">
                         { profile }
-                    </Row>
+                    </div>
                 </div>
             </div>
         )
