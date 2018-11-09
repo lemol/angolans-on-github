@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
+// Add stylesheet
+import './App.css';
+
 class App extends Component {
 
     // Constructor

@@ -1,0 +1,14 @@
+/*
+*   BEM architecture: Please follow it
+*   Built by the community 
+*/
+
+/*
+*   User component 
+*/
+
+.user__profile-photo{
+    width: 300px;
+    height: 300px;
+    background-color: #EEE;
+}
