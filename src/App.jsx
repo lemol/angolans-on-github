@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 
 // Add stylesheet
+import '../node_modules/bulma/css/bulma.min.css';
 import './App.css';
 
 class App extends Component {
