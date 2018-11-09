@@ -30,7 +30,7 @@ class App extends Component {
 
         const profile = this.state.users.map((user) => {
             return (
-                <Col className="user" key={user.node_id}>
+                <Col key={user.node_id}>
                     <figure className="user__profile-photo">
                         <img src={user.avatar_url} alt={user.login} className="user__profile-photo__img"/>
                     </figure>
