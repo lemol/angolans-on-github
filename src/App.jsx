@@ -1,3 +1,4 @@
+// Dependencies
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
@@ -15,7 +16,7 @@ class App extends Component {
         fetch('https://api.github.com/search/users?q=location:Angola&per_page=100')
         .then(res => res.json())
         .then(({ items, total_count }) => {
-            // Save the result in the current state
+            // Save the results in the current state
             this.setState({ users: items, totalUsers: total_count });
             console.log(items);
         })
@@ -26,8 +27,11 @@ class App extends Component {
 
         const profile = this.state.users.map((user) => {
             return (
-                <Col>
-                    {user.login}
+                <Col className="user" key={user.node_id}>
+                    <figure className="user__profile-photo">
+                        <img src={user.avatar_url} alt={user.login} className="user__profile-photo__img"/>
+                    </figure>
+                    <h1 className="user__name">{user.login}</h1>
                 </Col>
             );
         });
