@@ -11,7 +11,8 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            users: []
+            users: [],
+            hadErrorLoading: false
         };
     }
 
@@ -21,9 +22,8 @@ class App extends Component {
         .then(({ items, total_count }) => {
             // Save the results in the current state
             this.setState({ users: items, totalUsers: total_count });
-            console.log(items);
         })
-        .catch(err => console.log(err));
+        .catch(err => this.setState({ hadErrorLoading: true }));
     }
 
     render() {
