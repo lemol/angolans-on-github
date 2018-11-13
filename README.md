@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Roadmap
 
+- Add Header and Footer
 - Setup the initial structure
 - Build the stats section / view
 - Build a list of profiles
