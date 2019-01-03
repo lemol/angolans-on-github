@@ -10,10 +10,7 @@ export default {
       title: 'react-umi-apollo',
       dll: true,
       hardSource: true,
-      exportStatic: {
-        htmlSuffix: false,
-        dynamicRoot: true,
-      },
+      exportStatic: true,
       routes: {
         exclude: [
           /components/,
