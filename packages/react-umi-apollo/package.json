@@ -1,4 +1,6 @@
 {
+  "name": "@angolans-on-github/react-umi-apollo",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "umi dev",
