@@ -2,7 +2,7 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 
 const USERS_SEARCH_QUERY = gql`
-  query UsersSearchQuery($queryString: String) {
+  query UsersSearchQuery($queryString: String!) {
     search(query: $queryString, first: 20, type: USER) {
       nodes {
         ...on User {
@@ -27,7 +27,7 @@ export default function() {
         return 'Loading...';
       }
 
-      return <List users={data.search} />;
+      return <List users={data.search.nodes} />;
     }}
     </Query>
   );
