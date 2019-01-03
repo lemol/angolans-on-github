@@ -1,51 +1,9 @@
-import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
+import UserTile from './UserTile';
 
-const USERS_SEARCH_QUERY = gql`
-  query UsersSearchQuery($queryString: String!) {
-    search(query: $queryString, first: 20, type: USER) {
-      nodes {
-        ...on User {
-          avatarUrl
-          name
-          login
-        }
-      }
-    }
-  }
-`;
-
-export default function() {
-  return (
-    <Query query={USERS_SEARCH_QUERY} variables={{ queryString: 'location:angola' }}>
-    {({ data, error, loading }) => {
-      if (error) {
-        return 'Error loading data.';
-      }
-
-      if (loading) {
-        return 'Loading...';
-      }
-
-      return <List users={data.search.nodes} />;
-    }}
-    </Query>
-  );
-}
-
-function List({ users }) {
+export default function UserList({ users }) {
   return (
     <div>
-      {users.map(user => <User key={user.login} user={user} />)}
-    </div>
-  )
-}
-
-function User({ user: { name, login, avatarUrl } }) {
-  return (
-    <div>
-      <img src={avatarUrl} alt={name} />
-      <p>{login}</p>
+      {users.map(user => <UserTile key={user.login} user={user} />)}
     </div>
   );
 }

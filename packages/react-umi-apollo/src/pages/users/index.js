@@ -1,7 +1,7 @@
-import UserList from './components/UserList';
+import Body from './components/Body';
 
 export default function() {
   return (
-    <UserList />
+    <Body />
   );
 }
