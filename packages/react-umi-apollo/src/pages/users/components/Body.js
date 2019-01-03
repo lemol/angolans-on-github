@@ -21,7 +21,11 @@ export default function() {
     <Query query={USERS_SEARCH_QUERY} variables={{ queryString: 'location:angola' }}>
     {({ data, error, loading }) => {
       if (error) {
-        return 'Error loading data.';
+        if(error.networkError && error.networkError.statusCode) {
+          return <AuthenticationError />;
+        }
+
+        return 'Error loading data. I don\'t know what happened :(';
       }
 
       if (loading) {
@@ -31,5 +35,15 @@ export default function() {
       return <UserList users={data.search.nodes} />;
     }}
     </Query>
+  );
+}
+
+function AuthenticationError() {
+  return (
+    <div>
+      <p>Error loading data :( The authorization is not build yet :(</p>
+      <p>But we can solve it :) Please manually <a target="_blank" rel="noopener noreferrer" href="https://github.com/settings/tokens">create a github access token</a> and add it as Local Storage item with key <code>auth:token</code>.</p>
+      <p>You should grant the following rights for the access token <code>public_repo, repo:status, user</code></p>
+    </div>
   );
 }

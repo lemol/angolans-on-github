@@ -22,6 +22,7 @@ export default {
         ],
       },
     }],
+    // ref: https://github.com/lemol/umi-plugin-apollo
     ['umi-plugin-apollo', {
       uri: 'https://api.github.com/graphql',
       noMock: true,
