@@ -24,6 +24,9 @@
     "umi-plugin-apollo": "^0.0.1",
     "umi-plugin-react": "^1.1.1"
   },
+  "dependencies": {
+    "apollo-link-context": "^1.0.12"
+  },
   "lint-staged": {
     "*.{js,jsx}": ["eslint --fix", "git add"]
   },
