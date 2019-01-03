@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "angolans-on-github",
+  "public": true,
+  "alias": [
+    "angolans-on-github.now.sh"
+  ],
+  "builds": [
+    {
+      "src": "packages/react-umi-apollo/package.json",
+      "use": "@now/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/packages/react-umi-apollo/$1"
+    }
+  ]
+}
