@@ -12,7 +12,10 @@
   "builds": [
     {
       "src": "packages/react-umi-apollo/package.json",
-      "use": "@now/static-build"
+      "use": "@now/static-build",
+      "config": {
+        "useBuildUtils": "@now/build-utils@canary"
+      }
     }
   ],
   "routes": [
