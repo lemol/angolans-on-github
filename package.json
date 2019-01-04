@@ -1,8 +1,5 @@
 {
   "name": "angolans-on-github",
   "version": "0.1.0",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ]
+  "private": true
 }
