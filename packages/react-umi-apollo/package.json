@@ -30,7 +30,8 @@
     "firebase": "^5.7.2",
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
-    "react-firebase-hooks": "0.4.0"
+    "react-firebase-hooks": "0.4.0",
+    "umi": "2.3.2"
   },
   "resolutions": {
     "react": "16.7.0-alpha.0",
