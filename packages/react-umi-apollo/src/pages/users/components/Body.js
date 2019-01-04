@@ -25,6 +25,7 @@ export default function() {
           return <AuthenticationError />;
         }
 
+console.log(error)
         return 'Error loading data. I don\'t know what happened :(';
       }
 

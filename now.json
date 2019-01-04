@@ -5,6 +5,10 @@
   "alias": [
     "angolans-on-github.now.sh"
   ],
+  "env": {
+    "FIREBASE_API_KEY": "@firebase-api-key",
+    "FIREBASE_AUTH_DOMAIN": "@firebase-auth-domain"
+  },
   "builds": [
     {
       "src": "packages/react-umi-apollo/package.json",

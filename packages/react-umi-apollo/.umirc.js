@@ -8,8 +8,7 @@ export default {
       antd: true,
       dva: false,
       dynamicImport: true,
-      title: 'react-umi-apollo',
-      dll: true,
+      title: 'angolans-on-github-with-react-umi-apollo',
       hardSource: true,
       routes: {
         exclude: [
@@ -24,5 +23,12 @@ export default {
       uri: 'https://api.github.com/graphql',
       noMock: true,
     }],
+    // ref: https://github.com/lemol/umi-plugin-firebase
+    ['../../../umi-plugin-firebase',
+    /* -- default options = {
+      apiKey: process.env.FIREBASE_API_KEY,
+      authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    }*/
+    ],
   ],
 }
