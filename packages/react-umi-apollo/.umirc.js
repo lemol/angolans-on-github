@@ -24,11 +24,9 @@ export default {
       noMock: true,
     }],
     // ref: https://github.com/lemol/umi-plugin-firebase
-    ['../../../umi-plugin-firebase',
-    /* -- default options = {
+    ['umi-plugin-firebase', /* default = {
       apiKey: process.env.FIREBASE_API_KEY,
       authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    }*/
-    ],
+    }*/],
   ],
 }

@@ -6,8 +6,8 @@
     "angolans-on-github.now.sh"
   ],
   "env": {
-    "FIREBASE_API_KEY": "@firebase-api-key",
-    "FIREBASE_AUTH_DOMAIN": "@firebase-auth-domain"
+    "FIREBASE_API_KEY": "@aog-firebase-api-key",
+    "FIREBASE_AUTH_DOMAIN": "@aog-firebase-auth-domain"
   },
   "builds": [
     {
