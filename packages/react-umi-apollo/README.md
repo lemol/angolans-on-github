@@ -1,8 +1,15 @@
-## Requirements
+### Requirements
 
 A firebase project with authentication resource is necessary to run this app. You may want to setup authentication for Google and Facebook.
 
-## Run
+### Install
+
+```bash
+yarn
+```
+
+
+### Run
 
 
 ```bash
