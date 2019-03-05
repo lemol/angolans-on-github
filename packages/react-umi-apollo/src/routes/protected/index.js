@@ -1,6 +1,4 @@
-import { useAuthState } from 'react-firebase-hooks/auth';
-import firebase from 'firebase/app';
-import { toggleSignIn } from '@/utils/auth';
+import { toggleSignIn, useAuth } from '@/utils/auth';
 import Authorized from '@/components/Authorized';
 
 import 'firebase/auth';
@@ -16,7 +14,7 @@ function SignIn() {
 }
 
 export default function ({ children }) {
-  const { user } = useAuthState(firebase.auth());
+  const { user } = useAuth();
 
   return (
     <Authorized user={user} fallback={<SignIn />}>

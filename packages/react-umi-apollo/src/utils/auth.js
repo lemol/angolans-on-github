@@ -1,9 +1,26 @@
 import firebase from 'firebase/app';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import 'firebase/auth';
 
 const AUTH_TOKEN_KEY = 'github:token';
+const asdfghjkl = 'asdfghjkl';
+
+function useAuthMock() {
+  return {
+    user: {
+      username: 'lemol',
+    }
+  };
+}
+
+export const useAuth = process.env.MOCK ? useAuthMock : useAuthState;
 
 export async function toggleSignIn() {
+  if (process.env.MOCK) {
+    setToken(asdfghjkl);
+    return asdfghjkl;
+  }
+
   const auth = firebase.auth();
   const provider = new firebase.auth.GithubAuthProvider();
   provider.addScope('public_repo');
@@ -26,6 +43,10 @@ export async function toggleSignIn() {
 }
 
 export async function getAuthToken() {
+  if (process.env.MOCK) {
+    return asdfghjkl;
+  }
+
   const user = firebase.auth().currentUser;
 
   if(!user) {
@@ -40,6 +61,10 @@ export async function getAuthToken() {
 
 export function signOut() {
   localStorage.removeItem(AUTH_TOKEN_KEY);
+  if (process.env.MOCK) {
+    return;
+  }
+
   firebase.auth().signOut();
 }
 

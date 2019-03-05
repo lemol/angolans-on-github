@@ -2,6 +2,9 @@
 // ref: https://umijs.org/config/
 export default {
   exportStatic: true,
+  define: {
+    'process.env.MOCK': process.env.MOCK,
+  },
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
