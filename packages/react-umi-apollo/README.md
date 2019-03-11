@@ -14,7 +14,7 @@ To run with mocks, set the `MOCK` env to `true`.
 
 
 ```bash
-MOCK=true yarn
+MOCK=true yarn start
 ```
 
 ### Requirements for production
